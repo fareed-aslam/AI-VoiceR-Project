@@ -13,7 +13,15 @@ export default async function AuthPage({
 
   return (
     <main className="container flex grow flex-col items-center justify-center self-center p-4 md:p-6">
-      <AuthView path={path} redirectTo="/dashboard" />
+      <AuthView
+        path={path}
+        redirectTo="/dashboard"
+        classNames={{
+          form: {
+            error: "text-red-600 text-sm mb-2 text-center font-semibold",
+          },
+        }}
+      />
     </main>
   );
 }
